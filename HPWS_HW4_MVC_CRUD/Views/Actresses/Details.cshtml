@@ -1,0 +1,90 @@
+﻿@model HPWS_HW4_MVC_CRUD.Models.Actress
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Actress</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name_ch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_ch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bust)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bust)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.waist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.waist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hips)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hips)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.info)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stars)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ActressDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Actress">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="name_ch" Type="nchar" MaxLength="20" />
+          <Property Name="height" Type="int" />
+          <Property Name="bust" Type="int" />
+          <Property Name="waist" Type="int" />
+          <Property Name="hips" Type="int" />
+          <Property Name="cup" Type="nchar" MaxLength="3" />
+          <Property Name="info" Type="nvarchar(max)" />
+          <Property Name="stars" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ActressDBModelStoreContainer">
+          <EntitySet Name="Actress" EntityType="Self.Actress" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ActressDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Actress">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="name_ch" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="height" Type="Int32" />
+          <Property Name="bust" Type="Int32" />
+          <Property Name="waist" Type="Int32" />
+          <Property Name="hips" Type="Int32" />
+          <Property Name="cup" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+          <Property Name="info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="stars" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ActressDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Actress" EntityType="Self.Actress" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ActressDBModelStoreContainer" CdmEntityContainer="ActressDBEntities">
+          <EntitySetMapping Name="Actress">
+            <EntityTypeMapping TypeName="ActressDBModel.Actress">
+              <MappingFragment StoreEntitySet="Actress">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="name_ch" ColumnName="name_ch" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="bust" ColumnName="bust" />
+                <ScalarProperty Name="waist" ColumnName="waist" />
+                <ScalarProperty Name="hips" ColumnName="hips" />
+                <ScalarProperty Name="cup" ColumnName="cup" />
+                <ScalarProperty Name="info" ColumnName="info" />
+                <ScalarProperty Name="stars" ColumnName="stars" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
